@@ -9,10 +9,9 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.ProtocolException;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 @Service
 
@@ -54,9 +53,11 @@ public class HackathonService {
         statusResponses = endpoints.stream()
                 .map(this::getApiresponse)
                 .toList();
-
-
-        return HackathonResponse.builder().hora_consulta("2024-02-23").servicios(statusResponses).build();
+        String pattern = "dd-MM-yyyy HH:mm:ss";
+        DateFormat df = new SimpleDateFormat(pattern);
+        Date today = Calendar.getInstance().getTime();
+        String todayAsString = df.format(today);
+        return HackathonResponse.builder().hora_consulta(todayAsString).servicios(statusResponses).build();
     }
 
     private StatusResponse getApiresponse(Map<String, String> dataURl) {
