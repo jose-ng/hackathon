@@ -5,11 +5,13 @@
     <th>Estatus</th>
     <th>Código</th>
   </tr>
-  <tr *ngFor="let servicio of servicios.servicios">
-    <td>{{servicio.nombre}}</td>
-    <td><img class="crest-status"  [src]="servicio.status==='ok'? 'assets/slyth.jpeg': 'assets/gryff.jpeg'" alt="crest"/></td>
-    <td>{{servicio.codigo}}</td>
-  </tr>
+  <tbody>
+    <tr *ngFor="let servicio of servicios.servicios">
+      <td>{{servicio.nombre}}</td>
+      <td><img class="crest-status"  [src]="servicio.status==='ok'? 'assets/slyth.jpeg': 'assets/gryff.jpeg'" alt="crest"/></td>
+      <td>{{servicio.codigo}}</td>
+    </tr>
+  </tbody>
 </table>
 <p>
   Última consulta de los servicios mágicos: {{servicios.hora_consulta}}
