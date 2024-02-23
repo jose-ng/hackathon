@@ -7,6 +7,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { TestComponent } from './shared/components/test/test.component';
 import { AppHeaderComponent } from './layout/app-header/app-header.component';
 import { AppSidebarComponent } from './layout/app-sidebar/app-sidebar.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { DashboardComponent } from './views/dashboard/dashboard.component';
+import { historyComponent } from './views/history/history.component';
 
 @NgModule({
   declarations: [
@@ -15,8 +19,10 @@ import { AppSidebarComponent } from './layout/app-sidebar/app-sidebar.component'
     TestComponent,
     AppHeaderComponent,
     AppSidebarComponent,
+    DashboardComponent,
+    historyComponent
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
