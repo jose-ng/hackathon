@@ -36,10 +36,21 @@ export class DashboardComponent implements OnInit {
       }
     ]
   }
+  nextCall = 60;
   constructor() { }
 
   ngOnInit(): void {
+    this.timer()
+  }
 
+  timer() {
+    setInterval(()=>{
+      this.nextCall--;
+      if (this.nextCall == 0) {
+        //call api
+        this.nextCall = 60;
+      }
+    }, 1000)
   }
 
 }
