@@ -4,7 +4,7 @@
 
 *Los Dobbys con calcetin*
 
-Alan Eduardo Ibarra LÓpez
+Alan Eduardo Ibarra López
 Carlos Josiel Hernandez Sanchez
 Jose Carlos Alegria Marroquin
 Jose Nuñez Garcia
