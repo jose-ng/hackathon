@@ -1,8 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DashboardComponent } from './dashboard.component';
-import { HpApiService } from 'src/app/core/services/hp-api.service';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { HpApiService } from 'src/app/core/services/hp-api.service';
 
 describe('DashboardComponent', () => {
   let component: DashboardComponent;

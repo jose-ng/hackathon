@@ -1,12 +1,10 @@
 .history__component {
-
     $color_success: linear-gradient(to right, #1d976c, #93f9b9);
     $color_fail: linear-gradient(to right, #cb2d3e, #ef473a);
 
     display: flex;
     flex-direction: column;
-    padding: 50px;
-    gap: 50px;
+    gap: 30px;
 
     &__header {
         font-size: 24px;
@@ -17,7 +15,7 @@
     &__list {
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 10px;
 
         &__header {
             display: flex;
@@ -33,7 +31,7 @@
         &__item {
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: 5px;
 
             &__header {
                 display: flex;
@@ -48,19 +46,19 @@
                 span {
                     font-size: 15px;
                     font-weight: 500;
-                    color: #c03131;
+                    color: #626262;
                 }
             }
 
             &__status__bar__error {
-                height: 50px;
+                height: 15px;
                 width: 100%;
                 background: $color_fail;
                 border-radius: 5px;
             }
 
             &__status__bar__success {
-                height: 50px;
+                height: 15px;
                 width: 100%;
                 background: $color_success;
                 border-radius: 5px;
@@ -68,4 +66,11 @@
         }
     }
 
+    &__badge__error {
+        color: #ee473a !important;
+    }
+
+    &__badge__success {
+        color: #74dfa4 !important;
+    }
 }
