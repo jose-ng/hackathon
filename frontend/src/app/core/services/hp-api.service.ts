@@ -12,12 +12,12 @@ export class HpApiService {
 
   getStatus() {
     if (!environment.sendMock) {
-      return this.http.get<{ words: StatusModel[]; hora_consulta: string }>(
+      return this.http.get<{ servicios: StatusModel[]; hora_consulta: string }>(
         `${environment.API_URL}/status`
       );
     } else
-      return of({
-        horaConsulta: '23/02/2024 12:34:23',
+      return of<{ servicios: StatusModel[]; hora_consulta: string }>({
+        hora_consulta: '23/02/2024 12:34:23',
         servicios: [
           {
             nombre: 'Personajes',
