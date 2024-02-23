@@ -1,0 +1,19 @@
+<h1 class="text-3xl font-bold text-violet-700">Bienvenido al mundo mágico de los servicios</h1>
+<table>
+  <tr>
+    <th>Nombre del servicio mágico</th>
+    <th>Estatus</th>
+    <th>Código</th>
+  </tr>
+  <tr *ngFor="let servicio of servicios.servicios">
+    <td>{{servicio.nombre}}</td>
+    <td><img class="crest-status"  [src]="servicio.status==='ok'? 'assets/slyth.jpeg': 'assets/gryff.jpeg'" alt="crest"/></td>
+    <td>{{servicio.codigo}}</td>
+  </tr>
+</table>
+<p>
+  Última consulta de los servicios mágicos: {{servicios.horaConsulta}}
+</p>
+<p>
+  Próxima invocación del hechizo de consulta de estatus en 60s
+</p>
