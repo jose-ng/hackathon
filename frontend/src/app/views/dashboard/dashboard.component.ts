@@ -43,6 +43,7 @@ export class DashboardComponent implements OnInit {
   ngOnInit(): void {
     this._hpApiService.getStatus().subscribe((data :any) => {
       this.servicios = data;
+      this._hpApiService.history = data;
     })
   }
 
