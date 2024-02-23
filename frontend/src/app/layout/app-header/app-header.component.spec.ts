@@ -24,10 +24,8 @@ describe('AppHeaderComponent', () => {
 
   it('should have a title', () => {
     const title = 'API Health Monitoring';
-
-    const titleElement: DebugElement = fixture.debugElement.query(
-      By.css('#header-title')
-    );
-    expect(titleElement.nativeElement).toContain(title);
+    const titleElement = fixture.debugElement.query(By.css('#header-title'))
+      .nativeElement.textContent;
+    expect(titleElement).toContain(title);
   });
 });
