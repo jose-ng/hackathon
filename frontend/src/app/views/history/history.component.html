@@ -2,32 +2,26 @@
 
     <h1 class="history__component__header">Historial</h1>
 
-    <div class="history__component__list">
+    <div class="history__component__list" *ngFor="let element of hpApiService.history$ | async">
 
         <div class="history__component__list__header">
             <span>Hora de consulta</span>
-            <span>19-02-24 4:00</span>
+            <span>{{ element.hora_consulta }}</span>
         </div>
 
-        <div class="history__component__list__item">
+        <div class="history__component__list__item" *ngFor="let item of element.servicios">
             <div class="history__component__list__item__header">
-                <h1>Personajes o caracteres</h1>
-                <span>OK</span>
+                <h1>{{ item.nombre }}</h1>
+                <span
+                    [ngClass]="{'history__component__badge__success': item.codigo === 200, 'history__component__badge__error': item.codigo !== 200}">
+                    {{ item.status }}
+                </span>
             </div>
-            <div class="history__component__list__item__status__bar__error">
-            </div>
-        </div>
-
-        <div class="history__component__list__item">
-            <div class="history__component__list__item__header">
-                <h1>Personajes o caracteres</h1>
-                <span>OK</span>
-            </div>
-            <div class="history__component__list__item__status__bar__success">
+            <div
+                [ngClass]="{'history__component__list__item__status__bar__error': item.codigo !== 200, 'history__component__list__item__status__bar__success': item.codigo === 200}">
             </div>
         </div>
 
-        
     </div>
 
 </section>

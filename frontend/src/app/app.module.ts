@@ -10,7 +10,7 @@ import { AppSidebarComponent } from './layout/app-sidebar/app-sidebar.component'
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { DashboardComponent } from './views/dashboard/dashboard.component';
-import { historyComponent } from './views/history/history.component';
+import { HistoryComponent } from './views/history/history.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +20,7 @@ import { historyComponent } from './views/history/history.component';
     AppHeaderComponent,
     AppSidebarComponent,
     DashboardComponent,
-    historyComponent
+    HistoryComponent
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],

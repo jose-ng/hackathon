@@ -29,6 +29,7 @@ export class DashboardComponent implements OnInit {
   getStatuses() {
     this._hpApiService.getStatus().subscribe((data :any) => {
       this.servicios = data;
+      this._hpApiService.history = data;
       this.nextCall = 60;
       this.timer()
     })
