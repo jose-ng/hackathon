@@ -11,13 +11,13 @@ export class HpApiService {
   constructor(private http: HttpClient) {}
 
   getStatus() {
-    if (!environment.sendMock) {
+    if (environment.sendMock === false) {
       return this.http.get<{ servicios: StatusModel[]; hora_consulta: string }>(
         `${environment.API_URL}/status`
       );
     } else
       return of<{ servicios: StatusModel[]; hora_consulta: string }>({
-        hora_consulta: '23/02/2024 12:34:23',
+        hora_consulta: new Date().toString(),
         servicios: [
           {
             nombre: 'Personajes',
