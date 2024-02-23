@@ -1,17 +1,17 @@
 import { TestBed } from '@angular/core/testing';
-import { historyComponent } from './history.component';
+import { HistoryComponent } from './HistoryComponent';
 
-describe('historyComponent', () => {
+describe('HistoryComponent', () => {
     beforeEach(async () => {
         await TestBed.configureTestingModule({
             declarations: [
-                historyComponent
+                HistoryComponent
             ],
         }).compileComponents();
     });
 
     it('should create the app', () => {
-        const fixture = TestBed.createComponent(historyComponent);
+        const fixture = TestBed.createComponent(HistoryComponent);
         const app = fixture.componentInstance;
         expect(app).toBeTruthy();
     });
