@@ -14,13 +14,10 @@ import { AppSidebarComponent } from './layout/app-sidebar/app-sidebar.component'
     AppLayoutComponent,
     TestComponent,
     AppHeaderComponent,
-    AppSidebarComponent
+    AppSidebarComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
