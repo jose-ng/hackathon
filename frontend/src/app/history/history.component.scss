@@ -1,0 +1,71 @@
+.history__component {
+
+    $color_success: linear-gradient(to right, #1d976c, #93f9b9);
+    $color_fail: linear-gradient(to right, #cb2d3e, #ef473a);
+
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    gap: 50px;
+
+    &__header {
+        font-size: 24px;
+        font-weight: 600;
+        color: #212121;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        &__header {
+            display: flex;
+            gap: 2px;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+            color: #BDBDBD;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #BDBDBD;
+        }
+
+        &__item {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            &__header {
+                display: flex;
+                justify-content: space-between;
+
+                h1 {
+                    font-size: 15px;
+                    font-weight: 500;
+                    color: #626262;
+                }
+
+                span {
+                    font-size: 15px;
+                    font-weight: 500;
+                    color: #c03131;
+                }
+            }
+
+            &__status__bar__error {
+                height: 50px;
+                width: 100%;
+                background: $color_fail;
+                border-radius: 5px;
+            }
+
+            &__status__bar__success {
+                height: 50px;
+                width: 100%;
+                background: $color_success;
+                border-radius: 5px;
+            }
+        }
+    }
+
+}
