@@ -4,7 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { AppLayoutComponent } from './layout/app-layout/app-layout.component';
 import { AppRoutingModule } from './app-routing.module';
-import { TestComponent } from './shared/components/test/test.component';
 import { AppHeaderComponent } from './layout/app-header/app-header.component';
 import { AppSidebarComponent } from './layout/app-sidebar/app-sidebar.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -16,7 +15,6 @@ import { HistoryComponent } from './views/history/history.component';
   declarations: [
     AppComponent,
     AppLayoutComponent,
-    TestComponent,
     AppHeaderComponent,
     AppSidebarComponent,
     DashboardComponent,
